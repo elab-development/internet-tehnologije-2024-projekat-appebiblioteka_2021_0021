@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('nazivKnjige');
             $table->string('autor');
             $table->unsignedBigInteger('zanrId');
-            $table->foreign('zanrId')->references('id')->on('zanrovi')->onDelete('cascade');
-            $table->string('urlKnjige');
+            $table->foreign('zanrId')->references('id')->on('zanrovi')->onDelete('cascade');            $table->string('urlKnjige');
             $table->text('uvidKnjige');
             $table->timestamps();
         });
