@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Zanr;
 
 class KnjigaSeeder extends Seeder
 {
@@ -13,24 +12,18 @@ class KnjigaSeeder extends Seeder
      */
     public function run(): void
     {
-        $zanroviKnjige=[
-            'Triler',
-            'Drama',
-            'Komedija',
-            'Romantika',
-            'Akcija',
-            'Naučna fantastika',
-            'Fantastika',
-            'Horor',
-            'Misterija',
-            'Biografija',
-            'Istorija',
-            'Poezija',
-        ];
-        foreach($zanroviKnjige as $zanr){
-            Zanr::create(['nazivZanra'=>$zanr]);
+        $faker = \Faker\Factory::create();
+        $zanrovi = \App\Models\Zanr::all();
+        $testPdfUrl = 'https://klubcitalaca.wordpress.com/wp-content/uploads/2011/06/branislavnusic_sumljivo_lice.doc';
+
+        for ($i = 0; $i < 100; $i++) {
+            $knjiga = \App\Models\Knjiga::create([
+                'nazivKnjige' => $faker->sentence(3),
+                'autor' => $faker->name,
+                'urlKnjige' => $testPdfUrl,
+                'zanrId' => $zanrovi->random()->id,
+                'uvidKnjige' => $faker->sentence(30)
+            ]);
         }
     }
-
-
 }
