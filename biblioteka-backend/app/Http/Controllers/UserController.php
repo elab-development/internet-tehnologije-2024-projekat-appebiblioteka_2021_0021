@@ -17,11 +17,13 @@ class UserController extends OdgovorController
 
     public function donatoriBiblioteke(Request $request)
     {
-        $url = 'https://randomuser.me/api/?results=7';
+        $url = 'https://randomuser.me/api/?results=11';
 
         $client = new \GuzzleHttp\Client();
 
-        $response = $client->request('GET', $url);
+
+        //nije bezbedno ovako, mora se resiti sertifikat
+        $response = $client->request('GET', $url,['verify' => false]);
 
         $data = json_decode($response->getBody()->getContents());
 
