@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
+
+body {
+    font-family: "Nunito", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: #5c5c5c !important;
+    background-color: #fefefe;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* MENI */
+.meni-bg {
+    background-color: #a3c9f9 !important;
+    padding: 20px;
+    border-bottom: 3px solid #f7b2b7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.meni-bg a {
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* POZADINA */
+.background {
+    background-image: url('./slike/background.jpg') !important;
+    background-size: cover;
+    min-height: 85vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* GLAVNI SADRŽAJ */
+.main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FOOTER */
+.footer {
+    background-color: #cdb4db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #a8e6cf;
+}
+
+.footer a {
+    color: #a8e6cf;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    color: #f7b2b7;
+    text-decoration: underline;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* IKONICE DRUŠTVENIH MREŽA */
+.social-icons li {
+    display: inline;
+    margin: 0 12px;
+    font-size: 36px; /* veće ikone */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a {
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f7b2b7;
+    transform: scale(1.2);
+}
+
+/* COPYRIGHT */
+.copyright {
+    vertical-align: middle;
+    font-size: 20px;
+    margin-top: 12px;
+    font-family: "Playfair Display", serif;
+}
+
+/* KARTICE */
+.kartica-linkovi {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.kartica-linkovi a {
+    color: #5c5c5c;
+    font-weight: 600;
+}
+
+.kartica-linkovi a:hover {
+    color: #a3c9f9;
+}
+
+/* DUGME */
+.dugme {
+    background-color: #a8e6cf !important;
+    color: #5c5c5c !important;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dugme:hover {
+    background-color: #f7b2b7 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
 }
