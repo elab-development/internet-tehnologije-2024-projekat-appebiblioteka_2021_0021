@@ -13,9 +13,9 @@ body {
 
 /* MENI */
 .meni-bg {
-    background-color: #a3c9f9 !important;
+    background-color: #85271b !important;
     padding: 20px;
-    border-bottom: 3px solid #f7b2b7;
+    border-bottom: 3px solid #ffffff;
 }
 
 .meni-bg a {
@@ -42,15 +42,15 @@ body {
 
 /* FOOTER */
 .footer {
-    background-color: #cdb4db;
+    background-color: #85271b;
     color: #fff;
     padding: 20px;
     text-align: center;
-    border-top: 3px solid #a8e6cf;
+    border-top: 3px solid #ffffff;
 }
 
 .footer a {
-    color: #a8e6cf;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -109,7 +109,7 @@ body {
 
 /* DUGME */
 .dugme {
-    background-color: #a8e6cf !important;
+    background-color: #ffffff !important;
     color: #5c5c5c !important;
     border: none;
     padding: 12px 25px;

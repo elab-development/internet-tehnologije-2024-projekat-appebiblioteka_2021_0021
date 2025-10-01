@@ -23,7 +23,7 @@ const Footer = () => {
                         </Col>
                         <Col md={4} className="text-center">
                             <div className="copyright">
-                                <span>Čitaj pametno. Čitaj digitalno. <FaHeart/></span>
+                                <span>Čitaj pametno. Čitaj digitalno.</span>
                             </div>
                         </Col>
 
