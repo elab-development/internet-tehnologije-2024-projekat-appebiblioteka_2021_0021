@@ -27,7 +27,7 @@ body {
 
 /* POZADINA */
 .background {
-    background-image: url('./slike/background.jpg') !important;
+    background-image: url('./slike/background-books.jpg') !important;
     background-size: cover;
     min-height: 85vh;
 }
