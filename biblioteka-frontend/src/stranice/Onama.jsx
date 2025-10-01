@@ -1,7 +1,7 @@
 import React from 'react';
 import Naslov from "../komponente/Naslov";
 import jana from "../slike/jana.jpg";
-import veljko from "../slike/veljko.jpg";
+import veljko from "../slike/velja.jpg";
 import {Col, Row} from "react-bootstrap";
 import Kartica from "../komponente/Kartica";
 
