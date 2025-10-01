@@ -26,6 +26,10 @@ const Pocetna = () => {
             setIsLoading(true);
             setError(null);
             
+            const originalAuthHeader = server.defaults.headers.common['Authorization'];
+            
+            delete server.defaults.headers.common['Authorization'];
+            
             const apiPromises = apiUrls.map(url => 
                 server.get(url)
             );
@@ -55,9 +59,12 @@ const Pocetna = () => {
                 setKnjige(parsedBooks);
             } catch (err) {
                 console.error("Greška pri učitavanju OpenLibrary knjiga:", err);
-                setError("Došlo je do greške prilikom učitavanja knjiga. (OpenLibrary)");
+                setError("Došlo je do greške prilikom učitavanja knjiga.");
                 alert("Došlo je do greške prilikom učitavanja knjiga.");
             } finally {
+                if (originalAuthHeader) {
+                    server.defaults.headers.common['Authorization'] = originalAuthHeader;
+                }
                 setIsLoading(false);
             }
         };
